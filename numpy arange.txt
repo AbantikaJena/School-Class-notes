@@ -1,0 +1,7 @@
+arange() - The numpy arange function is a tool for creating numeric sequebces in python
+         - Syntax is :
+             np.arange([start,]stop[,step][,dtype])
+                 start(optional) : indicate begining value of range, if the value is not given by default it starts with 0
+                 stop(required) : indicates where we have to stop, last value will not be included as ibn case of for loop
+                 step(optional) : indicates how many steps we have to run, by default it is 1
+                 dtype(optional) : secify the data type

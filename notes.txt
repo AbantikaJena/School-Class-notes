@@ -1,0 +1,15 @@
+1. Open cmd and run command as a administrator.
+c:\windows\system32>
+2. Type cd\ to move to the root directory
+c:\windows\system32>cd\
+c:\>
+3. Type pip install matplotlib.
+c:\> pip install matplotlib
+
+In order to draw a line plot following step to be followed:-
+1. import matplotlib # import matplotlib.pyplot as plt
+2. plt.plot(x,y,colour,others)
+3. plt.xlabel("Your text")
+4. plt.ylabel("Your text")
+5. plt.set_title("Your text")
+6. plt.show

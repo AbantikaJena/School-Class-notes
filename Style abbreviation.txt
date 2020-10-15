@@ -1,0 +1,8 @@
+Matplot allow us to use different line style
+
+Style abbreviation          Style
+
+-                           solid line
+--                          dash line
+-.                          dash-dot line
+:                           dotted line

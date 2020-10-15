@@ -1,0 +1,10 @@
+colour abrbiation
+
+b           blue
+g           green
+k           black
+m           magenta
+r           red
+w           white
+y           yellow
+c           cyan
