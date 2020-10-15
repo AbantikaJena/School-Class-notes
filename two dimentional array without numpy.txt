@@ -1,0 +1,7 @@
+two dimentional array without numpy
+
+nested list
+
+In python nested list can be used as two dimentional array.
+    Eg. To declare the nested list with 4 rows and 3 columns, the command is :
+        A2d = [[0 for x in range(3)] for x in range (4)]
