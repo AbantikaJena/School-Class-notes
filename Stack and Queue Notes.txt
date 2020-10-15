@@ -1,0 +1,27 @@
+Stack and Queue using python list
+
+Stack :- It is a special linear data structure called LIFO(Last In First Out),it has only end, that is called top
+       - insertion and deletion takes place only top.
+       - The insertion operation of stack is called PUSH.
+       - The deletion operation is called is called POP.
+
+       ALGORITHM FOR PUSH OPERATION
+
+       Step 1: STRAT
+            2: val=input("Enter the value to be added in stack")
+            3: stack.append(val)
+            4: top = top+1
+            5: end
+            Note:- for loop is not used,while loop is used
+
+
+        ALGORITHM FOR POP OPERATION
+
+       Step 1: STRAT
+            2: slen = len(stack)
+            3: if slen<=0:
+            4: print "stack is empty"
+            5: else
+            6: val = 
+            5: end
+            Note:- for loop is not used,while loop is used

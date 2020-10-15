@@ -1,0 +1,36 @@
+QUEUE
+-------------
+qUEUE IS A SPECIAL LINEAR DATAstructure called FIFO(first in first out). like stack a queue also consist of a sequence of items and there are restrictions on how items can be added to and remove from the list.
+
+A Quey has two ends
+1) front- the end from which deletion takes place
+2)rear- the end from which insertion takes place
+
+
+IMPLEMENTATION OF QUEUE AS A LIST
+
+the basic operation carried out by a queue as alist are
+
+a) creating a queue using list
+2) inserting an elements in queue
+c) checking for empty queue
+d) traversal/displaying queue items
+
+
+a) creating a queue using list
+    the syntax
+    Queue=list() or Queue=[]
+
+2) Algorithm for inserting an elements in queue
+    1. START
+    2. element = input("Enter the element to be added in queue:")
+    3. queue.append(elements)
+    4. STOP
+
+c) Algorithm to checking for empty queue and also for deleting elements from queue
+    1. START
+    2. if Queue==[]
+          print("QUEUE is empty")
+          go to step4
+    3. element=Queue.pop(0)
+    4. STOP

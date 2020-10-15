@@ -1,0 +1,117 @@
+Application of stack
+
+1 Reversing a word or line
+2 The compiler use stack to store the previous state of a program when a function is called or
+during recursion
+3 Another important stack application is backtracking(it is a form of recursion ) Backtracking is used
+in a large number of puzzles like Sudoku and optimization problems such as knapsack.
+4. undo Mechanism in text editors
+
+1. conversion of INFIX (A+B) notation to POSTFIX (AB +)
+2. Evaluation of POSTFIX expression
+
+A+B         INFIX
+AB +        POSTFIX
++ AB        PREFIX
+(A-C)xC           AC-Bx  POSTFIX EXPRESSION
+(A+(BxC))/(C-(DxB))      BCx    DBx         (ABCx+)/(CDBx-)         ABCx+cDBx-/
+
+CONVERT A+(B*C-(D/E^F)*G)*H into post fix from showing stack status after every steps in tabular form
+            A + ( B * C - ( D /  E  ^  F  )  *  G  )  *  H
+            1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19          # first number it
+                                                                     # insert table
+
+            S.No.       Operator/Operand            Stack               Expression
+            1           A                                               A
+            2           +                           +                   A
+            3           (                           +(                  A
+            4           B                           +(                  AB
+            5           *                           +(*                 AB
+            6           C                           +(*                 ABC
+            7           -                           +(-                 ABC*
+            8           (                           +(-(                ABC*
+            9           D                           +(-(                ABC*D
+            10          /                           +(-(/               ABC*D
+            11          E                           +(-(/               ABC*DE
+            12          ^                           +(-(/^              ABC*DE
+            13          F                           +(-(/^              ABC*DEF
+            14          )                           +(-                 ABC*DEF^/
+            15          *                           +(-*                ABC*DEF^/
+            16          G                           +(-*                ABC*DEF^/G
+            17          )                           +                   ABC*DEF^/G*-
+            18          *                           +*                  ABC*DEF^/G*-
+            19          H                           +*                  ABC*DEF^/G*-H
+            20                                      +*                  ABC*DEF^/G*-H*+
+
+
+
+
+ EVALUATE THE EXPRESION 5 6 2 + * 12 4 / - IN TABULAR FORM SHOWING THE STACK STATUS AFTER EACH STEP.
+ 5 , 6 , 2 , + , * , 12 , 4 , / , -
+ 1   2   3   4   5   6    7   8   9
+
+ S.No.      Symbol                  Stack                   Output
+ 1          5 push                  5
+ 2          6 push                  5, 6
+ 3          2 push                  5, 6, 2
+ 4          + pop(onto element)     5, 8                    6+2=8
+ 5          * pop(onto element)     40,                     5*8=40
+ 6          12 push                 40, 12
+ 7          4 push                  40, 12, 4
+ 8          / pop(onto element)     40, 3                   12/4=3
+ 9          - pop(onto element)                             40-3=37
+
+ RESULT : 37
+
+
+EVALUATE THE EXPRESION False,True,NOT,OR,True,False,AND,OR IN TABULAR FORM SHOWING THE STACK STATUS AFTER EACH STEP.
+
+False,  True,  NOT,  OR,  True,  False,  AND,  OR
+1       2       3    4      5      6       7    8
+
+ S.No.      Symbol                  Stack                           Output
+ 1          False PUSH              False
+ 2          True PUSH               False,True
+ 3          NOT (on one element)    False, False                    NOT True=False
+ 4          OR(on two element)      False                           False OR Flase =False
+ 5          True PUSH               False,True
+ 6          False PUSH              False, True, False
+ 7          AND pop(on two elements) False, False                   True AND False = False
+ 8          OR pop(on two elements)  False                          False OR False = False
+
+
+
+250,45,9,/,5,=,20,*,-     (Evaluate the post fix expression
+A+B*C^D-E  ( convert into post-fix)
+
+A + B * C ^ D - E
+1 2 3 4 5 6 7 8 9
+
+
+ S.No.      Operator/Operand        Stack                   Output
+ 1          A                                               A
+ 2          +                       +                       A
+ 3          B                       +                       AB
+ 4          *                       +*                      AB*
+ 5          C                       +*                      ABC
+ 6          ^                       +*^                     ABC
+ 7          D                       +*^                     ABCD
+ 8          -                       +-                      ABCD^*+
+ 9          E                       +-                      ABCD^*+E
+ 10                                 +-                      ABCD^*+E-
+
+
+250 , 45 , 9 , / , 5 , + , 20 , * , -
+1     2    3   4   5   6   7    8   9
+
+
+ S.No.      Symbol                  Stack           Output
+ 1          250 PUSH                250
+ 2          45 PUSH                 250,45
+ 3          9 PUSH                  250,45,9
+ 4          / POP(ON TWO ELEMENT)   250,5           45/9=5
+ 5          5 PUSH                  250,5,5
+ 6          + POP(ON TWO ELEMENT)   250,10          5+5=10
+ 7          20 PUSH                 250,10,20
+ 8          * POP(ON TWO ELEMENT)   250,200         10*20=200
+ 9          - POP(ON TWO ELEMENT)   50              250-200=50
