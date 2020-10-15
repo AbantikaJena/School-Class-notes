@@ -1,0 +1,17 @@
+Method to manage MySql database transaction in python
+
+1) commit : MySqlConnection.commit() methods sends a commit statement to mysql server,committing the current transaction.
+
+2) rollback : MySqlConnection.rollback reverts the changes made by the current transaction.
+
+3) autocommit : Mysqlconnection.autocommit value can be assigned as True or False to enable the auto-commit feature of MySql. By default, its value is False.
+
+
+READ OPERATION
+
+1) fetchone() : it fetches the next row of a query result set.
+
+2) fetchall() : it fetches all the rows in a result set.
+
+3) rowcount: This is read-only attribute and returns the number of rows that were effected.
+
