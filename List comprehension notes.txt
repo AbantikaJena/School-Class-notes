@@ -1,0 +1,18 @@
+List comprehension - an efficient way of creating a list
+
+lst=[2,4,6,8,10]
+
+------------
+lst=[]
+for i in range(1,6):
+    lst.append(i*2)
+------------
+lst=[i*2 for i in range(1,6)] # This is list comprehension
+--------------------------
+
+List comprehension is a concise description of a list that shortlands the list creating for loop in the form of single statement.
+
+ADVANTAGES OF List comprehension:-
+1) Code reduction- a code of three of more line reduces to 1 line
+2) Faster code processing - a) python will allocate the list's memory first, before the adding the elements to it insted of having to resize on runtime
+                            b) Also, call to append() function get avoided, reducing funtion overhead time which may be cheap but add up.
